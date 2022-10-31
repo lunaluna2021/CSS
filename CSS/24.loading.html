@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading</title>
+    <style>
+        .myCard {
+            width: 300px;
+            min-height: 400px;
+            padding: 20px;
+            background-color: #ccc;
+            border-radius: 10px;
+        }
+
+        .img-wrap {
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(100deg, rgba(0, 0, 0, 0) 40%, rgba(255, 255, 255, 0.3) 50%, rgba(0, 0, 0, 0) 60%), goldenrod;
+
+            /* background: linear-gradient(to right,
+                    rgba(0, 0, 0, 0) 10%,
+                    rgba(255, 0, 0, 1) 10%,
+                    rgba(255, 0, 0, 1) 11%,
+                    rgba(0, 0, 0, 0) 11%,
+                    rgba(0, 0, 0, 0) 20%,
+                    rgba(140, 255, 0, 1) 20%,
+                    rgba(140, 255, 0, 1) 21%, rgba(0, 0, 0, 0) 21%, rgba(0, 0, 0, 0) 30%, rgba(45, 188, 249, 1) 30%, rgba(45, 188, 249, 1) 31%, rgba(0, 0, 0, 0) 31%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 41%, rgba(0, 0, 0, 0) 41%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 51%, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 1) 61%, rgba(0, 0, 0, 0) 61%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 1) 71%, rgba(0, 0, 0, 0) 71%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 1) 81%, rgba(0, 0, 0, 0) 81%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 1) 91%, rgba(0, 0, 0, 0) 91%), goldenrod; */
+            background-size: 200% 100%;
+            background-position-x: 0%;
+            /* animation: loading 2s linear infinite; */
+        }
+
+        @keyframes loading {
+            from {
+                background-position-x: 0%;
+            }
+
+            to {
+                background-position-x: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="myCard">
+        <div class="img-wrap"></div>
+    </div>
+</body>
+
+</html>

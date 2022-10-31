@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-overflow</title>
+</head>
+<style>
+    .wrap {
+        width: 40%;
+        border: 1px solid red;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-bottom: 50px;
+
+    }
+
+    .wrap2 {
+        width: 40%;
+        border: 1px solid red;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        word-break: keep-all;
+
+    }
+</style>
+
+<body>
+    <div class="wrap">遠雄集團涉大巨蛋等4弊案，經5年纏訟，台北地方法院今天判決遠雄集團創辦人趙藤雄7年徒刑、前財政部長李述德9年徒刑、新北市議員周勝考10年徒刑。全案可上訴。
+    </div>
+    <div class="wrap2">遠雄集團涉大巨蛋等4弊案，經5年纏訟，台北地方法院今天判決遠雄集團創辦人趙藤雄7年徒刑、前財政部長李述德9年徒刑、新北市議員周勝考10年徒刑。全案可上訴。
+        遠雄集團涉大巨蛋等4弊案，經5年纏訟，台北地方法院今天判決遠雄集團創辦人趙藤雄7年徒刑、前財政部長李述德9年徒刑、新北市議員周勝考10年徒刑。全案可上訴。
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo class</title>
+    <style>
+        .wrap {
+            width: 200px;
+            height: 200px;
+            background-color: #ccc;
+            transition: .5s;
+        }
+
+        .wrap:hover {
+            width: 400px;
+        }
+
+        .box:nth-child(2n) {
+            width: 100px;
+            height: 100px;
+            border: 1px solid blue;
+        }
+
+        .box:nth-child(2n-1) {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+
+
+        .price::before {
+            content: '$';
+        }
+
+        .price::after {
+            content: '元';
+        }
+
+        .mycard {
+            width: 300px;
+            height: 400px;
+            background-color: #ccc;
+            position: relative;
+        }
+
+        .mycard::after {
+            content: 'On Sale';
+            display: block;
+            width: 100px;
+            height: 100px;
+            /* background-color: brown; */
+            position: absolute;
+            right: -30px;
+            background-image: url('./images/1.png');
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="price">3000</h1>
+
+
+    <section>
+        <div class="mycard">
+            <p class="price">5000</p>
+        </div>
+        <div class="mycard">
+            <p class="price">5000</p>
+        </div>
+
+
+    </section>
+
+    <!-- <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+    <div class="box">box4</div>
+    <div class="box">box5</div>
+    <div class="box">box6</div>
+    <div class="box">box7</div>
+    <div class="box">box8</div>
+    <div class="box">box9</div>
+    <div class="box">box10</div>
+    <div class="box">box11</div>
+    <div class="box">box12</div> -->
+</body>
+
+</html>

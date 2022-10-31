@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text overflow</title>
+
+    <style>
+        .wrap {
+            width: 40%;
+            border: 1px solid red;
+
+            white-space: nowrap;
+            overflow: hidden;
+            Text-overflow: ellipsis;
+
+            margin-bottom: 50px;
+        }
+
+        .wrap2 {
+            width: 40%;
+            border: 1px solid red;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil atque, quas accusantium alias inventore impedit,
+        esse sint suscipit neque quidem voluptatibus quo aperiam fuga perferendis laboriosam molestias? Eligendi, beatae
+        quibusdam!
+    </div>
+
+    <div class="wrap2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus mollitia odit nulla enim inventore!
+        Molestiae illum quam quo accusamus atque hic, reiciendis, sapiente dolorum culpa repellat incidunt aperiam,
+        possimus asperiores!
+    </div>
+</body>
+
+</html>

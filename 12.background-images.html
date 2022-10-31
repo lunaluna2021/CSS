@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多重background</title>
+</head>
+<style>
+    .map {
+        width: 800px;
+        height: 450px;
+        background: url('./images/background1.jpg');
+        object-fit: cover;
+        background-size: 100%;
+    }
+
+    .map:hover {
+        background-: url('./images/1.png')center center no-repeat, url('./images/2.png')left center no-repeat, url('./images/3.png')right center no-repeat, url('./images/background1.jpg');
+        background-size: 10%, 10%, 10%, 100%;
+    }
+</style>
+
+<body>
+    <div class="map"></div>
+</body>
+
+</html>

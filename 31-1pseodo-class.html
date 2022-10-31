@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseodo class</title>
+    <link rel="stylesheet" href="./fontawesome-free-6.2.0-web/css/all.css">
+</head>
+<style>
+    @font-face {
+        font-family: 'Font Awesome 6 Free';
+        font-style: normal;
+        font-weight: 400;
+        font-display: block;
+        src: url("./fontawesome-free-6.2.0-web/webfonts/fa-regular-400.woff2") format("woff2"), url("./fontawesome-free-6.2.0-web/webfonts/fa-regular-400.ttf") format("truetype");
+    }
+
+    .price {
+        position: relative;
+    }
+
+    .price::before {
+        content: '$'
+    }
+
+    .price::after {
+        content: '元'
+    }
+
+    .mycard {
+        width: 300px;
+        height: 400px;
+        background-color: lightblue;
+        position: relative;
+    }
+
+    .mycard::after {
+        font-weight: 900;
+        font-family: 'Font Awesome 6 Free';
+        content: '\f0c1';
+        display: block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: antiquewhite;
+        position: absolute;
+        right: -30px;
+        line-height: 100px;
+        text-align: center;
+        /* background-image: url('/images/1.png'); */
+        background-size: cover;
+    }
+</style>
+
+<body>
+    <div>
+        <h1 class="price">3000</h1>
+    </div>
+
+    <div>
+        <section class="mycard">5000</section>
+    </div>
+
+</body>
+
+</html>
