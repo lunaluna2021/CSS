@@ -6,8 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex1</title>
+    <link rel="stylesheet" href="./fontawesome-free-6.2.0-web/css/all.css">
 
     <style>
+        @font-face {
+            font-family: 'Font Awesome 6 Free';
+            font-style: normal;
+            font-weight: 400;
+            font-display: block;
+            src: url("./fontawesome-free-6.2.0-web/webfonts/fa-solid-400.woff2") format("woff2"), url("./fontawesome-free-6.2.0-web/webfonts/fa-solid-400.ttf") format("truetype");
+        }
+
         body {
             width: 100%;
             background-image: url(./images/background1.jpg);
@@ -35,15 +44,29 @@
             transition: .5S;
         }
 
-        .card>img {
+        .card>img:first-child {
             max-width: 100%;
             position: absolute;
             margin: auto;
             transform: translateY(-13px)
         }
 
+        .card>img:nth-child(2) {
+            max-width: 100%;
+            position: absolute;
+            margin: auto;
+            opacity: 0;
+            transition: .5s;
+
+        }
+
         .card:hover {
             box-shadow: 1px 1px 30px orange;
+        }
+
+        .card:hover>img:nth-child(2) {
+            opacity: 1;
+            transform: translateY(-13px);
         }
 
         .circle {
@@ -55,6 +78,7 @@
             border: 3px solid transparent;
             overflow: hidden;
             position: relative;
+            transition: .5s;
 
         }
 
@@ -62,13 +86,42 @@
             max-width: 100%;
             position: absolute;
             margin: auto;
+            transition: 1s;
 
         }
 
-        .namecard {
+        .card:hover .circle img {
+            opacity: .7;
+        }
+
+        .card:hover .circle::after {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            font-weight: 900;
+            font-family: 'Font Awesome 6 Free';
+            content: '\f03e';
+            display: block;
+            left: 35%;
+            top: 40%;
+            font-size: 50px;
+
+        }
+
+        .card .namecard {
+            width: 100%;
+            margin: 0;
             padding-top: 30px;
             font-size: 30px;
             text-align: center;
+            text-shadow: 3px 3px 10px #CCC;
+            transition: .2S;
+        }
+
+        .card:hover .namecard {
+            letter-spacing: 2em;
+            text-indent: 2em;
+            text-shadow: 3px 3px 10px pink;
         }
 
         .r1 {
@@ -101,7 +154,7 @@
             height: 60px;
             border: 1px solid transparent;
             border-radius: 20px;
-            background-color: lightcoral;
+            background: linear-gradient(pink, coral);
             font-size: 32px;
             text-align: center;
             color: ghostwhite;
@@ -110,13 +163,13 @@
 
         .button1:hover {
             color: coral;
-
         }
 
         .button1:active {
             color: #FFD2D2;
             text-shadow: 1px 1px 2px white, 0 0 25px red, 0 0 5px darkred;
-            background-color: lightsalmon;
+            background: linear-gradient(#FFD2D2, #FFD2D2);
+
 
         }
     </style>
@@ -127,11 +180,12 @@
     <div class="card">
 
         <img src="./images/flowers.jpg" alt="">
+        <img src="./images/city.jpg" alt="">
 
         <div class="circle">
             <img src="/images/ex1_pic1.jpg" alt="">
         </div>
-        <div class="namecard">賽馬娘 Pretty Derby</div>
+        <div class="namecard">賽馬娘</div>
         <div class="r1"></div>
         <div class="introduction">遊戲開發公司Cygames以製作的手機遊戲與PC遊戲為主導，包含動畫、漫畫和音樂的多媒體企劃。簡稱「馬娘（ウマ娘）」。</div>
         <div class="button"> <button class="button1">follow me</button></div>
