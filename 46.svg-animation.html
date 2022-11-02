@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg-animation</title>
+</head>
+<style>
+    .circle {
+        stroke-dasharray: 1194;
+        /* stroke-dashoffset: 1194; */
+        animation: identifier 2s linear both;
+
+    }
+
+    .thick {
+        stroke-dasharray: 310;
+        stroke-dashoffset: 310;
+        animation: tick-animation 1s linear 1.9s both;
+    }
+
+    @keyframes identifier {
+        0% {
+            /* stroke-dasharray: 10; */
+            stroke-dashoffset: 1194;
+        }
+
+        100% {
+            /* stroke-dasharray: 1000; */
+            stroke-dashoffset: 0;
+
+        }
+
+
+    }
+
+    @keyframes tick-animation {
+        0% {
+            stroke-dashoffset: 310;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <svg width="400" height="400">
+            <defs>
+                <pattern id="img1" patternUnits="userSpaceOnUse" width="400" height="400">
+                    <image href="./images/anya.jpg" x="0" y="0" width="400" height="400" />
+                </pattern>
+            </defs>
+            <circle class="circle" cx="200" cy="200" r="190" stroke="green" stroke-width="20" stroke-linecap="round"
+                fill="none" transform="rotate(-90,200 200)" />
+            <circle class="circle2" cx="200" cy="200" r="190" fill="url(#img1)" />
+            <polyline class="thick" stroke="green" stroke-width="24" points="88,214 173,284 304,138" fill="none"
+                stroke-linejoin="round" stroke-linecap="round" />
+
+        </svg>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cube</title>
+</head>
+<style>
+    body {
+        margin: 300px;
+    }
+
+    .camera {
+        width: 200px;
+        height: 200px;
+
+        perspective: 800px;
+    }
+
+    .cube {
+        /* animation 參數設定 */
+        transform-style: preserve-3d;
+        transition: 2S;
+        animation: rotateY 5s infinite .2s;
+        animation-direction: alternate;
+        animation-fill-mode: both;
+
+
+        /* animation-delay: 2s; */
+    }
+
+    .cube:hover {
+        animation-play-state: paused;
+    }
+
+
+    .box {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+    }
+
+    .left {
+        background: rgba(255, 170, 255, 0.5);
+        transform: rotateY(-90deg) translateZ(100px);
+        transition: 0.3S;
+        /* backface-visibility: hidden; */
+    }
+
+
+    .cube:hover .left {
+        transform: rotateY(-90deg) translateZ(150px);
+        border-radius: 5%;
+    }
+
+    .right {
+        background: rgba(170, 170, 255, 0.5);
+        transform: rotateY(90deg) translateZ(100px);
+        transition: 0.3S;
+        /* backface-visibility: hidden; */
+    }
+
+
+    .cube:hover .right {
+        transform: rotateY(90deg) translateZ(150px);
+        border-radius: 5%;
+    }
+
+    .top {
+        background: rgba(170, 255, 255, 0.5);
+        transform: rotateX(90deg) translateZ(100px);
+        transition: 0.3S;
+        backface-visibility: visible;
+
+    }
+
+
+    .cube:hover .top {
+        transform: rotateX(90deg) translateZ(150px);
+        border-radius: 5%;
+    }
+
+    .bottom {
+        background: rgba(255, 255, 170, 0.5);
+        transform: rotateX(-90deg) translateZ(100px);
+        transition: 0.3S;
+        backface-visibility: visible;
+    }
+
+
+    .cube:hover .bottom {
+        transform: rotateX(-90deg) translateZ(150px);
+        border-radius: 5%;
+    }
+
+    .front {
+        background-color: rgba(170, 255, 170, 0.5);
+        transform: translateZ(100px);
+        transition: 0.3S;
+    }
+
+    .cube:hover .front {
+        transform: translateZ(150px);
+        border-radius: 5%;
+    }
+
+    .back {
+        background-color: rgba(255, 170, 170, 0.5);
+        transform: rotateY(-180deg) translateZ(100px);
+        transition: 0.3S;
+    }
+
+
+    .cube:hover .back {
+        transform: rotateY(-180deg) translateZ(150px);
+        border-radius: 5%;
+    }
+
+    @keyframes rotateY {
+
+        0% {
+            transform: rotateY(0deg);
+        }
+
+        50% {
+            transform: translate(30px, 30px) translateZ(100px);
+        }
+
+        100% {
+            transform: rotateX(45deg) rotateY(90deg) translate(40px, -40px)translateZ(150px);
+        }
+    }
+</style>
+
+<body>
+    <div class="camera">
+        <div class="cube">
+            <!-- 6面 -->
+            <div class="box left">左</div>
+            <div class="box right">右</div>
+            <div class="box top">上</div>
+            <div class="box bottom">下</div>
+            <div class="box front">前</div>
+            <div class="box back">後</div>
+        </div>
+    </div>
+</body>
+
+</html>
